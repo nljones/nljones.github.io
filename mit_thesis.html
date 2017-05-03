@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="author" content="Nathaniel Jones" />
+<meta name="copyright" content="Copyright (c) 2017 Nathaniel Jones" />
+
+<meta name="description" content="Nathaniel Jones' thesis on fast and accurate daylighting simulation" />
+
+<meta name="keywords" content="Nathaniel Jones, Massachusetts Institute of Technology, Daylighting, Architecture, Thesis, Visual Comfort, Climate Based Daylighting Metrics">
+<link rel="shortcut icon" href="https://architecture.mit.edu/sites/all/themes/sap_arch/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<title>Nathaniel Jones - PhD Thesis</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Model47563Banner.jpg" alt="" class="logo" />
+  </header>
+  <!-- Hero Section -->
+  <div class="text">
+    <h2>Fast and Accurate Daylighting Simulation</h2>
+
+    <p>My PhD thesis from MIT, <a href="publications/Validated_Interactive_Daylighting_Analysis_for_Architectural_Design.pdf" target="_blank">Validated Interactive Daylighting Analysis for Architectural Design</a>, can be read in full as as a pdf.</p>
+    
+    <h3>Abstract</h3>
+
+    <p>The conventional approach to predicting interior illumination and visual discomfort in buildings is to run a ray tracing simulation with high accuracy settings, wait while the simulation processes, and repeat as necessary with modifications to the scene and settings. This workflow lacks interactivity and usually occurs late in the design process to validate a completed design, if at all. For architecture to benefit from daylight as a practical, glare-free alternative to electric lighting, daylighting simulation and visual discomfort predictions must be available in real time during design. This thesis describes three innovations towards this goal: development of a parallel ray-tracing engine, validation against high dynamic range (HDR) photography and annual simulations, and human subject tests with interactive progressive rendering.</p>
+
+    <p>Lighting simulation can be sped up more than an order of magnitude by running it in parallel on readily available graphics processing units (GPUs). <a href="http://mit.edu/sustainabledesignlab/projects/Accelerad/" target="_blank">Accelerad</a> is a GPU-accelerated version of <span class="small">Radiance</span> synthetic imaging software for global illumination simulation developed by the author, introducing a novel method for parallel multiple-bounce irradiance caching. In validation studies comparing simulated and measured luminance and visual discomfort, Accelerad achieves similar accuracy to <span class="small">Radiance</span> at a speedup of 16 to 44 times. Applied to annual simulation methods to calculate climate based daylighting metrics such as daylight autonomy and annual sun exposure, Accelerad is 10 times faster than DAYSIM and 25 times faster than the five-phase method. Additionally, a progressive path tracing option is explored that calculates glare probability in seconds and enables interactive visual discomfort simulation.</p>
+
+    <p>By providing accurate lighting simulation results to designers in real time, this information is expected to inform the design process in ways not previously possible. In human subject tests, the availability of real-time feedback was associated with increased exploration of the design space, higher confidence in proposed designs, higher satisfaction with the design task, and better performing designs with respect to daylight autonomy and daylight glare probability. This supports the theory that system response time affects users’ cognitive states and suggests that designers will be more likely to adopt building performance simulation tools if they produce reliable results at interactive speeds.</p>
+            
+    <h3>Thesis Defense</h3>
+
+    <p>This is a recording of my thesis defense, which took place on April 3, 2017.</p>
+
+    <div class="center">
+      <iframe width="100%" height="390" src="https://www.youtube.com/embed/aUvymZXTPGo" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h3>Accelerad</h3>
+
+    <p><a href="http://mit.edu/sustainabledesignlab/projects/Accelerad/" target="_blank">Accelerad</a> is a free suite of programs for lighting and daylighting analysis and visualization that I developed at MIT's <a href="http://mit.edu/sustainabledesignlab/" target="_blank">Sustainable Design Lab</a>. The suite uses physically-based backward ray tracing algorithms inspired by <a href="http://www.lbl.gov/" target="_blank">Lawrence Berkeley National Laboratory</a>’s popular <a href="http://www.radiance-online.org/" target="_blank"><span class="small">Radiance</span></a> software suite by <a href="http://www.anyhere.com/" target="_blank">Greg Ward</a>. These algorithms are accelerated up to twenty times faster using <a href="http://www.nvidia.com/object/optix.html" target="_blank">OptiX&trade;</a>, a ray tracing engine built for the graphics processor unit (GPU). The acceleration factor scales with the number of available GPUs and is expected to increase on new generations of hardware. In order to allow for smooth adoption among Radiance users and software developers, Accelerad maintains compatibility with Radiance scene and output file formats and uses a subset of Radiance’s material modifiers and command-line arguments.</p>
+            
+    <p>These images show false color comparisons of images created with <span class="small">Radiance</span>'s <a href="http://radsite.lbl.gov/radiance/man_html/rpict.1.html" target="_blank">rpict</a> program and the equivalent program in Accelerad.</p>
+    
+    <div class="center">
+    <table>
+      <tr>
+        <td>
+          <a href="images/west0_o_fc2.png" alt="Click here for full resolution image">
+            <img class="full_width" src="images/west0_o_fc2.png" alt="Radiance rendering of small office" /><br/>
+            <strong><span class="small">Radiance</span></strong> &bull; 46 minutes<br/>
+          </a>
+        </td>
+        <td>
+          <a href="images/west0_filled_ab5_fc2.png" alt="Click here for full resolution image">
+            <img class="full_width" src="images/west0_filled_ab5_fc2.png" alt="Accelerad rendering of small office" /><br/>
+             <strong>Accelerad</strong> &bull; 2.8 minutes<br/>
+		  </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="images/Gund_o_fc2.png" alt="Click here for full resolution image">
+            <img class="full_width" src="images/Gund_o_fc2.png" alt="Radiance rendering of Gund Hall" /><br/>
+            <strong><span class="small">Radiance</span></strong> &bull; 198 minutes<br/>
+          </a>
+        </td>
+        <td>
+          <a href="images/gund_ab5_fc2.png" alt="Click here for full resolution image">
+            <img class="full_width" src="images/gund_ab5_fc2.png" alt="Accelerad rendering of Gund Hall" /><br/>
+             <strong>Accelerad</strong> &bull; 10 minutes<br/>
+		  </a>
+        </td>
+      </tr>
+    </table>
+    </div>
+
+  </div>
+  <!-- Footer Section -->
+  <footer id="contact">
+    <p class="hero_header">GET IN TOUCH WITH ME</p>
+    <div class="button">EMAIL ME </div>
+  </footer>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2017 Nathaniel Jones
+  <br/>
+  Last updated 5/2/17</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

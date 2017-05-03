@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="author" content="Nathaniel Jones" />
+<meta name="copyright" content="Copyright (c) 2017 Nathaniel Jones" />
+
+<meta name="description" content="Nathaniel Jones' thesis on genetic algorithms in architecture" />
+
+<meta name="keywords" content="Nathaniel Jones, Cornell University, Genetic Algorithm, Architecture, Thesis, Complex Adaptive System, Animation, Population">
+<link rel="shortcut icon" href="https://architecture.mit.edu/sites/all/themes/sap_arch/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<title>Nathaniel Jones - Master of Architecture Thesis</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Model47563Banner.jpg" alt="" class="logo" />
+  </header>
+  <!-- Hero Section -->
+  <div class="text">
+    <h2>Genetic Algorithms for Architecture</h2>
+
+    <p>My master's thesis from Cornell University, <a href="Architecture_as_a_Complex_Adaptive_System.pdf" target="_blank">Architecture as a Complex Adaptive System</a>, can be read in full as as a pdf.</p>
+    
+    <h3>Abstract</h3>
+
+    <p>Small changes to a design can have large and unexpected effects on a building's performance.  Unfortunately, analysis of a design to uncover the unintended consequences of early decisions often takes place late in the design process, if at all.  This is especially true for thermal analysis predicting comfort conditions and energy consumption in the building.  Ignoring thermal problems or fixing them in late design stages are expensive alternatives to preventing them with early analysis.</p>
+
+    <p>Architecture is a complex adaptive system, where many parameters contribute to the overall fitness of a building.  Some combinations of design elements offer more benefit than others.  In complex adaptive systems, improvement happens through an evolutionary process.  This iterative cycle of variation and selection occurs naturally when architects refine their designs.  Using a parametric model, the evolutionary process can be sped up by a computer, allowing many more variants and evaluation criteria to be considered.  Genetic algorithms can suggest creative solutions for design challenges that are too complex to be solved by human intuition.</p>
+
+    <p>The phenotype in this investigation is a house envelope built on a nine-square grid.  Each square of the three-by-three grid contains a thermal zone whose nine parameters determine its height, roof slope, materials, and porosity.  A deterministic crowding algorithm is used to minimize the house's energy requirements for heating, cooling, and lighting.  In the space of fifty generations, the algorithm produces significant energy reductions when tested in a number of climates.  At the same time, it generates a diverse population of options for further development by an architect.</p>
+
+    <p>Since the computer is unaware of normative building typologies for sustainable design, the forms it discovers are unique and unexpected.  Three particularly creative solutions found by the algorithm are adapted into schematic designs.  By assigning rooms with matching size and material needs to each zone, the resulting designs take advantage of the efficient forms found by the algorithm.  These schematic designs look quite different from typical sustainable houses; in some cases they incorporate elements that seem ill-advised from a thermal perspective.  Clever adaptations still allow them to perform much better than the average house.</p>
+
+    <p>Genetic algorithms can provide the architect with feedback on design decisions as they are made.  This feedback is not just validation of an idea, but a suggested course of action.  As computational speeds increase, these algorithms will become more useful as they conduct larger searches with more evaluation criteria.  Architects who use genetic algorithms will have a diverse set of tested options at their disposal early in the design process.</p>
+            
+    <h3>Animations</h3>
+
+    <p>These movies trace the progress of a genetic algorithm used to design a building envelope.  The algorithm seeks solutions which minimize HVAC and electrical lighting loads.  Optimal solutions are very much dependent on climate.</p>
+
+    <div class="center">
+      <iframe width="560" height="336" src="http://www.youtube.com/embed/videoseries?list=PL2NKmALflLGSzyjLSbyz4zTkoWWYHkW9A" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <p>Most of these simulations use a genetic algorithm with deterministic crowding.  Other algorithms such as mu+lambda (&mu;+&lambda;) do not produce as diverse solutions.</p>
+
+    <p>A column of dots in the left of each frame indicates energy usage.  Each dot corresponds to 50 kWh per day in the peak heating or cooling month.</p>
+
+    <p>Models were created in <a href="http://www.bentley.com/en-US/Markets/Building/GenerativeComponents" target="_blank">GenerativeComponents</a> using a script and evaluated in <a href="https://knowledge.autodesk.com/support/ecotect-analysis/troubleshooting/caas/sfdcarticles/sfdcarticles/Ecotect-Analysis-Discontinuation-FAQ.html" target="_blank">Ecotect</a>.</p>
+
+    <h3>Populations</h3>
+
+    <p>These images show entire populations tested in the genetic algorithm.  Moving from left to right, each column contains the members of each successive generation.</p>
+
+    <div class="center">
+      <a href="images/Model97516Small.jpg" alt="Click here for full resolution image">
+        <img class="full_width" src="images/Model97516Banner.jpg" alt="Click here for image" /><br/>
+        <strong>Anchorage</strong> &bull; 1.4 MB
+      </a>
+    </div>
+    <div class="center">
+      <a href="images/Model47563Small.jpg" alt="Click here for full resolution image">
+        <img class="full_width" src="images/Model47563Banner.jpg" alt="Click here for image" /><br/>
+        <strong>Dubai</strong> &bull; 1.4 MB
+      </a>
+    </div>
+    <div class="center">
+      <a href="images/Model95740Small.jpg" alt="Click here for full resolution image">
+        <img class="full_width" src="images/Model95740Banner.jpg" alt="Click here for image" /><br/>
+        <strong>Ithaca &mu;+&lambda;</strong> &bull; 1.3 MB
+      </a>
+    </div>
+
+  </div>
+  <!-- Footer Section -->
+  <footer id="contact">
+    <p class="hero_header">GET IN TOUCH WITH ME</p>
+    <div class="button">EMAIL ME </div>
+  </footer>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2017 Nathaniel Jones
+  <br/>
+  Last updated 5/2/17</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
