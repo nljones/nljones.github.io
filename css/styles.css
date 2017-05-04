@@ -165,8 +165,8 @@ header {
 }
 footer {
 	background-color: #B3B3B3;
-	padding-top: 60px;
-	padding-bottom: 60PX;
+	padding-top: 30px;
+	padding-bottom: 20PX;
 }
 .intro {
 	display: inline-block;
@@ -221,7 +221,7 @@ a:hover {
 }
 .text_column {
 	width: 100%;
-	text-align: justify;
+	text-align: left;
 	padding: 0;
 }
 .intro .column p {
@@ -286,7 +286,7 @@ a:hover {
 }
 .intro .column p {
 	width: 90%;
-	text-align: center;
+	text-align: justify;
 	padding-left: 0px;
 }
 }
@@ -331,12 +331,13 @@ ul {
     width: 350px;
     display:block;
     margin: 0 auto;
+	text-align: center;
 }
 .social-icon {
     color: #fff;
 }
 ul.social-icons {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -410,7 +411,7 @@ ul.social-icons {
     background-color: #322f30;
 }
 .ai-google-scholar:hover {
-    background-color: #C50003;
+    background-color: #4885ED;
 }
 .ai-orcid {
     padding:10px 13px;
