@@ -22,6 +22,7 @@
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="css/academicons.css" rel="stylesheet" type="text/css"/>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
 <!-- Google Analytics tracking -->
@@ -48,13 +49,13 @@
       <img src="images/Nathaniel_Jones.jpg" alt="" class="profile circle_crop"> </div>
     <div class="column">
       <p>Dr. Nathaniel Jones is a building scientist, educator, and software developer. He is currently an Advanced Technology & Research analyst at <a href="https://www.arup.com/" target="_blank">Arup</a> and teaches building science at the <a href="https://www.usfca.edu/" target="_blank">University of San Francisco</a>. His background spans architectural design, engineering, and computer science, with an emphasis tools that aid informed decision making in early design. He is the developer of <a href="http://mit.edu/sustainabledesignlab/projects/Accelerad/" target="_blank">Accelerad</a>, a suite of open-source GPU-based lighting and daylighting simulation tools used by architects, engineers, and educators around the world.</p>
-      <p>Nathaniel earned his PhD from the <a href="http://www.mit.edu/" target="_blank">Massachusetts Institute of Technology</a> in 2017. As part of the <a href="https://architecture.mit.edu/discipline/building-technology" target="_blank">Building Technology</a> program, he performed cutting-edge research in daylighting, visual comfort, and building- and urban-scale energy simulation in the <a href="http://mit.edu/SustainableDesignLab/" target="_blank">Sustainable Design Lab</a> with <a href="https://architecture.mit.edu/faculty/christoph-reinhart" target="_blank">Christoph Reinhart</a>.</p>
-      <p>Nathaniel is active in the building science community and serves as chair of the <a href="http://ibpsa.us/" target="_blank">International Building Performance Simulation Association-USA</a> chapter’s subcommittee on emerging simulation technologies. He is the author of multiple journal and conference papers related to building energy and daylighting simulation, and he has regularly been an invited speaker on the application of parallel computation to building simulation.</p>
+      <p>Nathaniel earned his PhD from the <a href="http://www.mit.edu/" target="_blank">Massachusetts Institute of Technology</a> in 2017. As part of the <a href="https://architecture.mit.edu/discipline/building-technology" target="_blank">Building Technology</a> program, he performed cutting-edge research in daylighting, visual comfort, and building- and urban-scale energy simulation in the <a href="http://mit.edu/SustainableDesignLab/" target="_blank">Sustainable Design Lab</a> with <a href="https://architecture.mit.edu/faculty/christoph-reinhart" target="_blank">Dr. Christoph Reinhart</a>.</p>
+      <p>Nathaniel is active in the building science community and serves as chair of the <a href="http://ibpsa.us/" target="_blank">International Building Performance Simulation Association-USA</a> chapter’s <a href="https://sites.google.com/site/ibpsausaresearchcommittee/" target="_blank">Research Committee</a> and subcommittee on <a href="https://sites.google.com/site/emergingsimulationtechnology/" target="_blank">Emerging Simulation Technologies</a>. He is the author of multiple journal and conference papers related to building energy and daylighting simulation, and he has regularly been an invited speaker on the application of parallel computation to building simulation.</p>
 
     </div>
   </section>
   <!-- Stats Gallery Section -->
-  <div class="gallery">
+  <div class="gallery" data-masonry='{ "itemSelector": ".thumbnail" }'>
     <div class="thumbnail"> <a href="https://nljones.github.io/Accelerad/"><img src="images/gund_ab5_fc2.png" alt="" class="cards"/>
       <h4>Accelerad</h4></a>
       <p class="text_column"><a href="https://nljones.github.io/Accelerad/" target="_blank">Accelerad</a> is a free suite of programs for lighting and daylighting analysis and visualization. It speeds up <a href="https://www.radiance-online.org" target="_blank">Radiance</a> calculations up to forty times faster using <a href="http://www.nvidia.com/object/optix.html" target="_blank">OptiX&trade;</a>, a ray tracing engine built for the graphics processor unit (GPU). Accelerad maintains compatibility with Radiance scene and output file formats and uses a subset of Radiance’s material modifiers and command-line arguments.</p>
@@ -99,7 +100,7 @@
   <!-- Copyrights Section -->
   <div class="copyright">&copy;2018 Nathaniel Jones
   <br/>
-  Last updated 1/1/18</div>
+  Last updated 3/15/18</div>
 </div>
 <!-- Main Container Ends -->
 </body>

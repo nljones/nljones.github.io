@@ -18,6 +18,7 @@
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="css/academicons.css" rel="stylesheet" type="text/css"/>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
 <!-- Google Analytics tracking -->
@@ -43,7 +44,15 @@
 
   </div>
   <!-- Stats Gallery Section -->
-  <div class="gallery">
+  <div class="gallery" data-masonry='{ "itemSelector": ".thumbnail" }'>
+    <div class="thumbnail"> <a href="images/view_accelerad_diva.png"><img src="images/view_A_Accelerad_small.png" alt="Click here for full-size image" class="cards"/></a>
+      <a href="https://doi.org/10.1080/19401493.2018.1449889" target="_blank">
+        <h4>Effects of real-time simulation feedback on design for visual comfort</h4></a>
+      <p class="tag">Journal Article, 2018</p>
+      <p class="text_column">Nathaniel L. Jones and Christoph F. Reinhart &bull;
+				Journal of Building Performance Simulation &bull;
+				DOI: 10.1080/19401493.2018.1449889</p>
+    </div>
     <div class="thumbnail"> <a href="images/Stereo.PNG"><img src="images/Stereo_small.png" alt="Click here for full-size image" class="cards"/></a>
       <a href="https://www.dropbox.com/sh/havj44rr42hunk6/AACR0FWPXFR-ev_TZvc_Qkt7a?dl=0&preview=Session1_2_Jones_DIVA_2017.pdf" target="_blank">
         <h4>From Radiance to real-time and virtual reality</h4></a>
@@ -302,7 +311,7 @@
   <!-- Copyrights Section -->
   <div class="copyright">&copy;2018 Nathaniel Jones
   <br/>
-  Last updated 1/1/18</div>
+  Last updated 3/15/18</div>
 </div>
 <!-- Main Container Ends -->
 </body>
