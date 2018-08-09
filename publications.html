@@ -19,6 +19,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="css/academicons.css" rel="stylesheet" type="text/css"/>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 <!-- Google Analytics tracking -->
@@ -44,7 +45,7 @@
 
   </div>
   <!-- Stats Gallery Section -->
-  <div class="gallery" data-masonry='{ "itemSelector": ".thumbnail" }'>
+  <div class="gallery">
     <div class="thumbnail"> <a href="images/view_accelerad_diva.png"><img src="images/view_A_Accelerad_small.png" alt="Click here for full-size image" class="cards"/></a>
       <a href="https://doi.org/10.1080/19401493.2018.1449889" target="_blank">
         <h4>Effects of real-time simulation feedback on design for visual comfort</h4></a>
@@ -314,5 +315,12 @@
   Last updated 3/15/18</div>
 </div>
 <!-- Main Container Ends -->
+<!-- Masonry grid layout -->
+<script>
+  //var $gallery = $('.gallery').masonry({ itemSelector: '.thumbnail', });
+  //$gallery.imagesLoaded().progress( function() { $gallery.masonry('layout'); });
+  var grid = document.querySelector('.gallery');
+  imagesLoaded(grid, function(){ new Masonry( grid, { itemSelector: '.thumbnail' }); });
+</script>
 </body>
 </html>

@@ -19,6 +19,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="css/academicons.css" rel="stylesheet" type="text/css"/>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 <!-- Google Analytics tracking -->
@@ -44,7 +45,7 @@
 
   </div>
   <!-- Stats Gallery Section -->
-  <div class="gallery" data-masonry='{ "itemSelector": ".thumbnail" }'>
+  <div class="gallery">
     <div class="thumbnail">
       <a href="http://www.ibpsa.org/Newsletter/IBPSANews-27-1.pdf#page=6" target="_blank"><img src="images/VR_user_small.jpg" alt="" class="cards"/>
         <h4>Projects and work at MIT: an interview with Christoph Reinhart</h4></a>
@@ -77,11 +78,14 @@
 				October 2014</p>
     </div>
     <div class="thumbnail">
-      <a href="http://www.engineering.cornell.edu/news/magazine/fall2011/Features/sustain.cfm" target="_blank"><img src="http://www.engineering.cornell.edu/news/magazine/fall2011/Features/images/sustaingroup_1.jpg" alt="" class="cards" />
+      <!--<a href="http://www.engineering.cornell.edu/news/magazine/fall2011/Features/sustain.cfm" target="_blank"><img src="http://www.engineering.cornell.edu/news/magazine/fall2011/Features/images/sustaingroup_1.jpg" alt="" class="cards" />-->
+      <a href="http://www.atkinson.cornell.edu/news/blog/877" target="_blank"><img src="http://www.atkinson.cornell.edu/Assets/ACSF/images/blog/20111110-Greenberg-600x298.jpg" alt="" class="cards" />
         <h4>Better together</h4></a>
       <p class="tag">2011</p>
       <p class="text_column">Cornell Engineering Magazine &bull;
 				Fall 2011</p>
+      <p class="text_column note">Reproduced in part in the <a href="http://www.atkinson.cornell.edu/news/blog/877" target="_blank">Atkinson Center Blog</a> &bull;
+				November 10, 2011</p>
     </div>
     <div class="thumbnail">
       <a href="http://www.news.cornell.edu/stories/2010/09/computer-graphics-help-streamline-green-building-design" target="_blank"><img src="http://www.news.cornell.edu/sites/chronicle.cornell/files/software_0.jpg" alt="" class="cards" />
@@ -89,7 +93,7 @@
       <p class="tag">2010</p>
       <p class="text_column">Cornell Chronicle &bull;
 				September 29, 2010</p>
-      <p class="text_column note">Reproduced in <a href="http://cacm.acm.org/news/99559-computer-graphics-to-help-streamline-green-building-design/fulltext" target="_blank">Communications of the ACM</a> &bull
+      <p class="text_column note">Reproduced in <a href="http://cacm.acm.org/news/99559-computer-graphics-to-help-streamline-green-building-design/fulltext" target="_blank">Communications of the ACM</a> &bull;
 				October 1, 2010</p>
     </div>
     <div class="thumbnail">
@@ -126,5 +130,10 @@
   Last updated 3/15/18</div>
 </div>
 <!-- Main Container Ends -->
+<!-- Masonry grid layout -->
+<script>
+  var grid = document.querySelector('.gallery');
+  imagesLoaded(grid, function(){ new Masonry( grid, { itemSelector: '.thumbnail' }); });
+</script>
 </body>
 </html>

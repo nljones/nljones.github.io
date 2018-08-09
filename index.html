@@ -23,6 +23,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="css/academicons.css" rel="stylesheet" type="text/css"/>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 <!-- Google Analytics tracking -->
@@ -55,7 +56,7 @@
     </div>
   </section>
   <!-- Stats Gallery Section -->
-  <div class="gallery" data-masonry='{ "itemSelector": ".thumbnail" }'>
+  <div class="gallery">
     <div class="thumbnail"> <a href="https://nljones.github.io/Accelerad/"><img src="images/gund_ab5_fc2.png" alt="" class="cards"/>
       <h4>Accelerad</h4></a>
       <p class="text_column"><a href="https://nljones.github.io/Accelerad/" target="_blank">Accelerad</a> is a free suite of programs for lighting and daylighting analysis and visualization. It speeds up <a href="https://www.radiance-online.org" target="_blank">Radiance</a> calculations up to forty times faster using <a href="http://www.nvidia.com/object/optix.html" target="_blank">OptiX&trade;</a>, a ray tracing engine built for the graphics processor unit (GPU). Accelerad maintains compatibility with Radiance scene and output file formats and uses a subset of Radiance’s material modifiers and command-line arguments.</p>
@@ -103,5 +104,10 @@
   Last updated 3/15/18</div>
 </div>
 <!-- Main Container Ends -->
+<!-- Masonry grid layout -->
+<script>
+  var grid = document.querySelector('.gallery');
+  imagesLoaded(grid, function(){ new Masonry( grid, { itemSelector: '.thumbnail' }); });
+</script>
 </body>
 </html>
