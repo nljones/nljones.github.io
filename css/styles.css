@@ -399,13 +399,6 @@ ul.social-icons {
 .fa-linkedin:hover {
     background-color: #0073a4;
 }
-.fa-google-plus {
-    padding:10px 10px;
-    background-color: #322f30;
-}
-.fa-google-plus:hover {
-    background-color: #e25714;
-}
 .ai-google-scholar {
     padding:10px 13px;
     background-color: #322f30;
@@ -426,4 +419,11 @@ ul.social-icons {
 }
 .ai-researchgate:hover {
     background-color: #46E5CF;
+}
+.ai-publons {
+    padding:10px 13px;
+    background-color: #322f30;
+}
+.ai-publons:hover {
+    background-color: #369;
 }
