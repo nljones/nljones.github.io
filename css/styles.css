@@ -421,6 +421,13 @@ ul.social-icons {
 .ai-researchgate:hover {
     background-color: #46E5CF;
 }
+.ai-semantic-scholar {
+    padding:10px 13px;
+    background-color: #322f30;
+}
+.ai-semantic-scholar:hover {
+    background-color: #1857b6;
+}
 .ai-publons {
     padding:10px 13px;
     background-color: #322f30;
